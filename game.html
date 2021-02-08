@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Breakout game</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="game.css">
+		<link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+		<script src="game.js"></script>
+		<script src="https://kit.fontawesome.com/d537d10dee.js"></script>
+	</head>	
+
+	<body>
+		<canvas id="myCanvas" width="480" height="320"></canvas>
+		
+		<div id="alert_lose">	
+			<h1>Game over !</h1>
+			<p id="p1" onclick="document.location.reload()">Try again ?</p>
+		</div>
+		<div id="alert_win">
+			<h2>You win !</h2>
+			<p id="p2">Play next level ?</p>
+		</div>
+		<div id="alert_finish">
+			<h3>Congratulations ! You have finished the game !</h3>
+			<p id="p3" onclick="document.location.reload()">Play again ?</p>
+		</div>
+		
+		<div id="play"><p>Play</p></div>
+		<div id="countdown">
+			<p><span id="span1">3</span></p>
+			<p><span id="span2">2</span></p>
+			<p><span id="span3">1</span></p>
+			<p><span id="span4">GO !</span></p>
+		</div>
+		<div id="container_block">	
+			<div id="block_left"></div>
+			<div id="block_right"></div>
+		</div>
+		
+		<div id="container_score">	
+			<h4 id="score"></h4>
+		</div>
+		<div id="container_level">
+			<h4 id="level"></h4>
+		</div>
+		
+		<audio id="preloaded_sound_impact" muted>
+			<source src="sounds/sound_impact.mp3" type="audio/mpeg">
+		</audio>
+		<audio id="sound_win">
+			<source src="sounds/sound_win.mp3" type="audio/mpeg">
+		</audio>
+		<audio id="sound_loose">
+			<source src="sounds/sound_loose.mp3" type="audio/mpeg">
+		</audio>
+	</body>
+</html>
