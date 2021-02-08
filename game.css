@@ -1,0 +1,320 @@
+body
+{
+	margin: 0;
+	padding: 0;
+	background-color: #1c1c1c;
+}
+
+#myCanvas
+{
+	background: #eee;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	z-index: 10;
+}
+
+#alert_lose
+{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+h1, h2, h3
+{
+	font-family: poppins;
+	font-size: 30px;
+	color: white;
+	display: none;
+}
+
+#p1, #p2, #p3
+{
+	font-family: poppins;
+	font-size: 20px;
+	color: white;
+	text-decoration: underline;
+	cursor: pointer;
+	margin-top: -10px;
+	display: none;
+}
+
+h1.active, h2.active, h3.active, #p1.active, #p2.active, #p3.active
+{
+	display: block;
+}
+
+#alert_win
+{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+#alert_finish
+{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+#play
+{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	z-index: 30;
+	background-color: white;
+	border-radius: 15px;
+	cursor: pointer;
+}
+
+#play p
+{
+	font-size: 20px;
+	font-family: poppins;
+	font-weight: 800;
+	color: #0095DD;
+	text-decoration: underline;
+	text-transform: uppercase;
+	margin: 0;
+	padding: 10px 15px;
+}
+
+#play.hide
+{
+	display: none;
+}
+
+#countdown
+{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	z-index: 20;
+}
+
+span
+{
+	font-family: poppins;
+	font-size: 20px;
+	white-space: nowrap;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	visibility: hidden;
+}
+
+#span1.animated1
+{
+	animation: anim_one 1s 0s forwards;
+}
+
+@keyframes anim_one
+{
+	0%
+	{
+		visibility: visible;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%,-50%);
+	}
+
+	100%
+	{
+		visibility: visible;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%,-150%);
+		opacity: 0;
+	}
+}
+
+#span2.animated2
+{
+	animation: anim_two 1s 1s forwards;
+}
+
+@keyframes anim_two
+{
+	0%
+	{
+		visibility: visible;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%,-50%);
+	}
+
+	100%
+	{
+		visibility: visible;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%,-150%);
+		opacity: 0;
+	}
+}
+
+#span3.animated3
+{
+	animation: anim_three 1s 2s forwards;
+}
+
+@keyframes anim_three
+{
+	0%
+	{
+		visibility: visible;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%,-50%);
+	}
+
+	100%
+	{
+		visibility: visible;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%,-150%);
+		opacity: 0;
+	}
+}
+
+#span4.animated4
+{
+	animation: anim_four 1s 3s forwards;
+}
+
+@keyframes anim_four
+{
+	0%
+	{
+		visibility: visible;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%,-50%);
+	}
+
+	100%
+	{
+		visibility: visible;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%,-150%);
+		opacity: 0;
+	}
+}
+
+#container_block
+{
+	width: 480px;
+	height: 320px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	z-index: 25;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+}
+
+#block_left
+{
+	position: relative;
+	left: 0;
+	width: 50%;
+	height: 100%;
+	background-color: #0095DD;
+	transition: 0.6s;
+}
+
+#block_right
+{
+	position: relative;
+	right: 0;
+	width: 50%;
+	height: 100%;
+	background-color: #0095DD;
+	transition: 0.6s;
+}
+
+#block_left.shift_left
+{
+	position: relative;
+	left: -50%;
+}
+
+#block_right.shift_right
+{
+	position: relative;
+	right: -50%;
+}
+
+#container_score
+{
+	position: absolute;
+	top: 50%;
+	left: 15%;
+	transform: translate(-15%,-50%);
+	width: 12%;
+	background-color: #0095DD;
+	border-radius: 15px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	visibility: hidden;
+}
+
+#score
+{
+	font-family: poppins;
+	font-size: 20px;
+	color: white;
+	margin: 0;
+}
+
+#container_level
+{
+	position: absolute;
+	top: 50%;
+	left: 85%;
+	transform: translate(-85%,-50%);
+	width: 12%; 
+	background-color: #0095DD;
+	border-radius: 15px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	visibility: hidden;
+}
+
+#level
+{
+	font-family: poppins;
+	font-size: 20px;
+	color: white;
+	margin: 0;	
+}
+
+#container_score.visible, #container_level.visible
+{
+	visibility: visible;
+}
